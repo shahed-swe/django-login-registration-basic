@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+<!--  -->
+{%block content%}
+<!-- block extends here -->
+<style>
+    .container {
+        padding-top: 100px;
+    }
+    
+    .btn {
+        margin-top: 20px;
+    }
+</style>
+<div class="container">
+    <form method="POST">
+        {%csrf_token%}
+        <label for="">Username</label>
+        <input type="text" name="username" class="form-control col-6">
+        <label for="">Password</label>
+        <input type="password" name="password" class="form-control col-6">
+        <button class="btn btn-outline-success shadow-none">Login</button>
+    </form>
+</div>
+{%endblock content%}

@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+<!--  -->
+{% block content %}
+<style>
+    .container {
+        padding-top: 100px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <form method="POST">
+            {%csrf_token%}
+            <!--  -->
+            {{form.as_p}}
+            <button class="btn btn-outline-primary shadow-none">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
